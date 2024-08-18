@@ -8,9 +8,4 @@ public class PersistData implements Handler{
     public void handle(ExecutionContext context) {
         System.out.println(context.getMsg() + " persistData");
     }
-
-    @Override
-    public boolean canHandle(ExecutionContext context) {
-        return true;
-    }
 }

@@ -3,23 +3,18 @@ package com.moon.designpattern.cor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.util.List;
-
 @Service
 public class HandlerService {
-    private final List<Handler> handlers;
+    private final Strategy handlers;
 
     @Autowired
-    public HandlerService(List<Handler> handlers) {
+    public HandlerService(Strategy handlers) {
         this.handlers = handlers;
     }
 
     public void process(ExecutionContext context) {
-        for (Handler handler : handlers) {
-            if (handler.canHandle(context)) {
-                handler.handle(context);
-                break;
-            }
+        for (Handler handler : handlers.getHandlers()) {
+            handler.handle(context);
         }
     }
 }

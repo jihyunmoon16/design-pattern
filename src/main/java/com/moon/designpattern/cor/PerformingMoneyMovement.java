@@ -8,9 +8,4 @@ public class PerformingMoneyMovement implements Handler{
     public void handle(ExecutionContext context) {
         System.out.println(context.getMsg() + "performing money movement");
     }
-
-    @Override
-    public boolean canHandle(ExecutionContext context) {
-        return false;
-    }
 }

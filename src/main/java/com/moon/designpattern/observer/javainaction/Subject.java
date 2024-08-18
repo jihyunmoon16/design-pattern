@@ -1,0 +1,7 @@
+package com.moon.designpattern.observer.javainaction;
+
+public interface Subject {
+    void registerObserver(Observer o);
+
+    void notifyObservers(String tweet);
+}

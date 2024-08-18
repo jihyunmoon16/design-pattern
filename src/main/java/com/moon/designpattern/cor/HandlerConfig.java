@@ -12,5 +12,4 @@ public class HandlerConfig {
     public List<Handler> handlers(RequestValidator requestValidator, PerformingMoneyMovement performingMoneyMovement, PersistData persistData) {
         return Arrays.asList(requestValidator, persistData, performingMoneyMovement);
     }
-
 }
